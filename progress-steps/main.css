@@ -1,3 +1,8 @@
+html {
+  --full-line: #3498db;
+  --empty-line: #e0e0e0;
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -15,7 +20,6 @@ body {
 
 .button-container,
 .steps-container {
-  /* border: 1px solid red; */
   flex: 1;
 }
 .steps-container {
@@ -27,12 +31,14 @@ body {
 .steps-container .steps-mark {
   padding: 0.2rem 0.5rem;
   border-radius: 50%;
-  border: 3px solid gray;
+  border: 3px solid var(--empty-line);
+  transition: border-color 0.5s ease-out;
 }
 
 .steps-container .steps-line {
   flex: 1;
-  border: 2px solid gray;
+  border: 2px solid var(--empty-line);
+  transition: border-color 0.5s ease-out;
 }
 
 .button-container {
@@ -43,7 +49,7 @@ body {
 
 .button-container > button {
   border: none;
-  background-color: blue;
+  background-color: var(--full-line);
   padding: 0.5rem 1.5rem;
   border-radius: 5px;
   color: white;
@@ -54,9 +60,10 @@ body {
 }
 
 .steps-container .is-selected {
-  border: 3px solid cyan;
+  border: 3px solid var(--full-line);
+  transition: border-color 0.5s ease-out;
 }
 
 .button-container .is-disabled {
-  background-color: darkgray;
+  background-color: var(--empty-line);
 }
