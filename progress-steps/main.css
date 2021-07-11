@@ -1,0 +1,62 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 300px;
+  height: 150px;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container,
+.steps-container {
+  /* border: 1px solid red; */
+  flex: 1;
+}
+.steps-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.steps-container .steps-mark {
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
+  border: 3px solid gray;
+}
+
+.steps-container .steps-line {
+  flex: 1;
+  border: 2px solid gray;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container > button {
+  border: none;
+  background-color: blue;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.button-container > #prev {
+  margin-right: 0.5rem;
+}
+
+.steps-container .is-selected {
+  border: 3px solid cyan;
+}
+
+.button-container .is-disabled {
+  background-color: darkgray;
+}
