@@ -6,6 +6,7 @@ html {
 body {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -66,4 +67,21 @@ body {
 
 .button-container .is-disabled {
   background-color: var(--empty-line);
+}
+
+footer {
+  padding: 3rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+footer > a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--full-line);
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  box-shadow: 2px 2px 4px 3px var(--empty-line);
 }
