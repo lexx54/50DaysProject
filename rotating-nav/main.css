@@ -1,0 +1,106 @@
+:root {
+  --background-color: #333;
+  --secondary-bg-color: white;
+  --nav-color: #ff7979;
+}
+body {
+  background-color: var(--background-color);
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  line-height: 1.5rem;
+}
+main {
+  min-height: 100vh;
+  background-color: var(--secondary-bg-color);
+  padding: 7rem 0 5rem;
+  transition: transform 1s ease-in-out;
+  transform-origin: top left;
+}
+.article-container {
+  margin: 0 auto;
+  width: 75%;
+}
+.article-title {
+  font-size: 2rem;
+  margin: 0.3rem 0;
+}
+.article-title-subtext {
+  margin: 0.3rem 0;
+  font-size: 0.8rem;
+  color: gray;
+  font-style: italic;
+}
+.article-text {
+  text-align: justify;
+}
+.article-img {
+  width: 100%;
+}
+
+.navegation {
+  position: fixed;
+  top: 60%;
+  color: var(--secondary-bg-color);
+}
+.links {
+  margin: 2rem 0;
+  transition: transform 1s ease;
+  transform: translateX(-6rem);
+}
+.links > i {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.menu {
+  width: 150px;
+  height: 150px;
+  background-color: var(--nav-color);
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  z-index: 10;
+  border-radius: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "empty empty"
+    "menu ex";
+  transition: transform 1s ease-in-out;
+  color: var(--secondary-bg-color);
+}
+.menu > div {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.menu > div:first-child {
+  grid-area: menu;
+  padding: 0.7rem 0 0 2.5rem;
+}
+.menu > div:last-child {
+  grid-area: ex;
+  padding: 1rem 0 0 1rem;
+}
+.rotate {
+  transform: rotate(-90deg);
+  transition: transform 0.6s ease-in;
+}
+.rotate-container {
+  transform: rotate(-20deg);
+  transition: transform 0.6s ease-in;
+}
+
+.translate:first-child {
+  transform: translateX(1rem);
+  transition: transform 1s ease;
+}
+.translate:nth-child(2) {
+  transform: translateX(2.5rem);
+  transition: transform 1.2s ease;
+}
+.translate:last-child {
+  transform: translateX(3.5rem);
+  transition: transform 1.5s ease;
+}
